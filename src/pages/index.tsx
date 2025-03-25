@@ -1,7 +1,13 @@
+import ProductList from "@/components/common/Product/ProductList";
+
 interface IProps {}
 
 function HomePage({}: IProps) {
-    return <div>HomePage</div>;
+    return (
+        <>
+            <ProductList />
+        </>
+    );
 }
 
 export default HomePage;

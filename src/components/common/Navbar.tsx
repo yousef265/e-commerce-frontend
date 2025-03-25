@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, Box, Button, Center, ClientOnly, Flex, HStack, IconButton, Menu, Portal, Skeleton, Stack, useDisclosure } from "@chakra-ui/react";
+import { Avatar, Box, Button, Center, ClientOnly, Container, Flex, HStack, IconButton, Menu, Portal, Skeleton, Stack, useDisclosure } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { FaBars, FaClipboardList, FaHome, FaShoppingCart, FaTimes } from "react-icons/fa";
 import { IoMoon, IoSunny } from "react-icons/io5";
@@ -50,8 +50,8 @@ const Navbar = () => {
     const { open, onOpen, onClose } = useDisclosure();
     const { toggleColorMode, colorMode } = useColorMode();
     return (
-        <Box bg={useColorModeValue("gray.100", "blackAlpha.900")} px={4}>
-            <Flex h={16} alignItems={"center"} justifyContent={"space-between"} overflow={"hidden"}>
+        <Box bg={useColorModeValue("gray.100", "blackAlpha.900")}>
+            <Flex as={Container} h={16} alignItems={"center"} justifyContent={"space-between"} overflow={"hidden"}>
                 <IconButton aria-label="Open Menu" onClick={open ? onClose : onOpen} display={{ base: "flex", md: "none" }} justifyContent="center" alignItems="center">
                     {open ? <FaTimes /> : <FaBars />}
                 </IconButton>
