@@ -11,7 +11,7 @@ export default function Footer() {
     const bgColor = useColorModeValue("blackAlpha.900", "whiteAlpha.900");
     return (
         <Box bg={useColorModeValue("gray.50", "gray.900")} color={useColorModeValue("gray.700", "gray.200")} position={"relative"} bottom={0} insetX={0} w={"full"}>
-            <Container as={Stack} maxW={"6xl"} py={4} padding={4} justifyContent={"center"} alignItems={"center"}>
+            <Container as={Stack} maxW={"6xl"} padding={4} justifyContent={"center"} alignItems={"center"}>
                 <HStack alignItems={"center"} maxH={"100px"} overflow={"hidden"}>
                     <RouterLink to={"/"}>
                         <Box as={SiWoocommerce} w={"150px"} h={"fit-content"} />
@@ -28,7 +28,6 @@ export default function Footer() {
                 <Container
                     as={Stack}
                     maxW={"6xl"}
-                    py={4}
                     direction={{ base: "column", md: "row" }}
                     padding={4}
                     justifyContent={{ base: "center", md: "space-between" }}

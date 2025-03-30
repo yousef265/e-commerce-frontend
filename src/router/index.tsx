@@ -14,6 +14,7 @@ import AuthLayout from "../components/layouts/AuthLayout";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 import NotFoundPage from "../pages/NotFound";
+import ProductDetailsPage from "@/components/common/Product/Details";
 
 const routes = createRoutesFromElements(
     <>
@@ -24,6 +25,7 @@ const routes = createRoutesFromElements(
             <Route path="checkout" element={<CheckoutPage />} />
             <Route path="orders" element={<OrdersPage />} />
             <Route path="profile" element={<ProfilePage />} />
+            <Route path="product/:id" element={<ProductDetailsPage />} />
         </Route>
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminLayout />}>

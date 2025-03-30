@@ -1,7 +1,15 @@
+import Information from "./Information";
+import RelatedProducts from "./RelatedProducts";
+
 interface IProps {}
 
-function ProductDetailsPage({}: IProps) {
-    return <div>ProductDetailPage</div>;
+function Details({}: IProps) {
+    return (
+        <>
+            <Information />
+            <RelatedProducts />
+        </>
+    );
 }
 
-export default ProductDetailsPage;
+export default Details;
