@@ -16,7 +16,7 @@ interface IProps {
 
 const Links: IProps[] = [
     { title: "home", to: "/", icon: <FaHome /> },
-    { title: "orders", to: "/orders", icon: <FaClipboardList /> },
+    { title: "orders", to: "/customer/order", icon: <FaClipboardList /> },
     { title: "cart", to: "/cart", icon: <FaShoppingCart /> },
 ];
 

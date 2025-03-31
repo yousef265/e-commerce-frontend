@@ -4,6 +4,7 @@ import { useState } from "react";
 import { LuMinus, LuPlus } from "react-icons/lu";
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import Carousel from "./Carousel";
+import HeadingTitle from "../HeadingTitle";
 
 interface IProps {}
 
@@ -15,6 +16,7 @@ function Information({}: IProps) {
 
     return (
         <>
+            <HeadingTitle title="Product Details" size={"2xl"} mb={5} />
             <Flex gap={{ base: 5, md: 10 }} bg={bgColor} shadow={"2xl"} rounded={"lg"} border={`1px solid ${borderColor}`} direction={{ base: "column", md: "row" }} p={4}>
                 <Box flex={{ base: "none", md: 1 }} w={{ base: "100%", md: "50%" }}>
                     <Carousel />
