@@ -1,10 +1,10 @@
 import { useColorModeValue } from "@/components/ui/color-mode";
-import { Box, Button, Flex, Heading, HStack, IconButton, NumberInput, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, IconButton, Text } from "@chakra-ui/react";
 import { useState } from "react";
-import { LuMinus, LuPlus } from "react-icons/lu";
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
-import Carousel from "./Carousel";
 import HeadingTitle from "../HeadingTitle";
+import Stepper from "../Stepper";
+import Carousel from "./Carousel";
 
 interface IProps {}
 
@@ -40,28 +40,7 @@ function Information({}: IProps) {
                                     Add To Cart
                                 </Button>
                             ) : (
-                                <NumberInput.Root
-                                    defaultValue="1"
-                                    unstyled
-                                    spinOnPress={false}
-                                    onValueChange={(Details) => {
-                                        if (Details.valueAsNumber === 0) setToggleCart(true);
-                                    }}
-                                >
-                                    <HStack gap="2">
-                                        <NumberInput.DecrementTrigger asChild>
-                                            <IconButton variant="outline" size="sm">
-                                                <LuMinus />
-                                            </IconButton>
-                                        </NumberInput.DecrementTrigger>
-                                        <NumberInput.ValueText textAlign="center" fontSize="lg" minW="3ch" />
-                                        <NumberInput.IncrementTrigger asChild>
-                                            <IconButton variant="outline" size="sm">
-                                                <LuPlus />
-                                            </IconButton>
-                                        </NumberInput.IncrementTrigger>
-                                    </HStack>
-                                </NumberInput.Root>
+                                <Stepper setToggleCart={setToggleCart} />
                             )}
 
                             {/* Condition Here */}

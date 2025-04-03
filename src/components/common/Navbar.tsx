@@ -96,7 +96,7 @@ const Navbar = () => {
                                     </Menu.Item>
 
                                     <Menu.Item value="Orders" cursor="pointer">
-                                        <Box flex="1">Orders</Box>
+                                        <Link to="customer/order">My Orders</Link>
                                     </Menu.Item>
                                     <Menu.Item value="Logout" cursor="pointer">
                                         <Box flex="1">Logout</Box>

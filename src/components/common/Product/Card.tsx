@@ -1,7 +1,7 @@
-import { Button, Card, HStack, IconButton, Image, NumberInput, Text } from "@chakra-ui/react";
+import { Button, Card, Image, Text } from "@chakra-ui/react";
 import { useState } from "react";
-import { LuMinus, LuPlus } from "react-icons/lu";
 import { Link } from "react-router-dom";
+import Stepper from "../Stepper";
 interface IProps {}
 
 function CardPage({}: IProps) {
@@ -34,21 +34,7 @@ function CardPage({}: IProps) {
                         Add To Cart
                     </Button>
                 ) : (
-                    <NumberInput.Root defaultValue="1" unstyled spinOnPress={false} flex={1} onValueChange={(Details) => Details.valueAsNumber === 0 && setToggleCart(true)}>
-                        <HStack gap="2">
-                            <NumberInput.DecrementTrigger asChild>
-                                <IconButton variant="outline" size="sm">
-                                    <LuMinus />
-                                </IconButton>
-                            </NumberInput.DecrementTrigger>
-                            <NumberInput.ValueText textAlign="center" fontSize="lg" minW="3ch" />
-                            <NumberInput.IncrementTrigger asChild>
-                                <IconButton variant="outline" size="sm">
-                                    <LuPlus />
-                                </IconButton>
-                            </NumberInput.IncrementTrigger>
-                        </HStack>
-                    </NumberInput.Root>
+                    <Stepper setToggleCart={setToggleCart} />
                 )}
 
                 <Link to="product/1">

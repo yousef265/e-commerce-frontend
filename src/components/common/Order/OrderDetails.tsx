@@ -23,7 +23,7 @@ function OrderDetails({}: IProps) {
             <Flex bg={bgColor} direction={"column"} shadow={"2xl"} rounded={"lg"} border={`1px solid ${borderColor}`} p={3} my={4} overflow={"hidden"}>
                 {Array.from({ length: 3 }).map((_, index, arr) => (
                     <Flex key={index} direction="row" alignItems={"center"} borderBottom={index !== arr.length - 1 ? `1px solid ${borderColor}` : "none"} pb={index !== arr.length - 1 ? 3 : 0}>
-                        <Image src={imageUrl} mx="auto" alt={`Image ${index + 1}`} w={{ base: "200px", md: "200px" }} objectFit="cover" borderRadius="lg" />
+                        <Image src={imageUrl} mx="auto" alt={`Image ${index + 1}`} w={"200px"} objectFit="cover" borderRadius="lg" />
                         <OrderData items={items} orientation={useBreakpointValue({ base: "vertical", md: "horizontal" })} />
                     </Flex>
                 ))}

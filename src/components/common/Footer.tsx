@@ -19,8 +19,8 @@ export default function Footer() {
                 </HStack>
                 <Stack direction={"row"} spaceX={3}>
                     <RouterLink to={"/"}>Home</RouterLink>
-                    <RouterLink to={"/orders"}>Orders</RouterLink>
-                    <RouterLink to={"/cart"}>Cart</RouterLink>
+                    <RouterLink to={"customer/order"}>Orders</RouterLink>
+                    <RouterLink to={"cart"}>Cart</RouterLink>
                 </Stack>
             </Container>
 
